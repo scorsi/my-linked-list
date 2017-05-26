@@ -18,6 +18,7 @@ typedef		struct s_my_llist		t_my_llist;
 typedef		t_my_llist *(*t_myll_func)(t_my_llist *);
 
 t_my_llist	*myll_link(t_my_llist *, t_my_llist *);
+t_my_llist	*myll_init(t_my_llist *);
 
 struct		s_my_llist
 {
