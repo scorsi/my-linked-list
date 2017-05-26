@@ -33,6 +33,7 @@ int main()
   test1 = malloc(sizeof(t_test));
   if (test1 == NULL)
     return (EXIT_FAILURE);
+  myll_init(&test1->list);
   test1->nb = 42;
   test2 = malloc(sizeof(t_test));
   if (test2 == NULL)
@@ -40,6 +41,7 @@ int main()
     free(test1);
     return (EXIT_FAILURE);
   }
+  myll_init(&test2->list);
   test2->nb = 84;
 
   /* Call the link method on both elements. */
