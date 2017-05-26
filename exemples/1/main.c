@@ -1,5 +1,5 @@
 /*
-** main.c for myll in /home/sylvain/Travail/Perso/myll/exemple/main.c
+** main.c for myll in /home/sylvain/Travail/Perso/myll/exemples/1/main.c
 **
 ** Made by Sylvain CORSINI
 ** Login   <sylvain.corsini@epitech.eu>
@@ -8,6 +8,7 @@
 ** Last update Fri May 26 10:16:24 2017 Sylvain CORSINI
 */
 
+/* Permits to use t_myll instead of t_my_llist. */
 #define MYLL_TINY_DEF
 
 #include <stdlib.h>
@@ -16,6 +17,7 @@
 
 struct s_test
 {
+  /* Do not put the linked list struct as pointer! */
   t_myll	list;
   int		nb;
 };
@@ -49,8 +51,10 @@ int main()
   while (x != NULL)
   {
     printf("%d\n", x->nb);
+    /* Change pointer as in classic linked list but cast it into your own struct. */
     x = (t_test *) x->list.right;
   }
+
   /* Loop over left elements. */
   x = test2;
   while (x != NULL)
