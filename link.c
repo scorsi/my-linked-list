@@ -10,9 +10,9 @@
 
 #include	"myll.h"
 
-t_my_llist	*myll_link(t_my_llist *llist1, t_my_llist *llist2)
+t_my_llist	*myll_link(t_my_llist *llist, t_my_llist *elem_to_add)
 {
-  llist1->right = llist2;
-  llist2->left = llist1;
-  return (llist1);
+  llist->right = elem_to_add;
+  elem_to_add->left = llist;
+  return (llist);
 }
