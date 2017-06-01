@@ -20,6 +20,9 @@ typedef		t_my_llist *(*t_myll_func)(t_my_llist *);
 t_my_llist	*myll_link(t_my_llist *llist, t_my_llist *elem_to_add);
 t_my_llist	*myll_link_right(t_my_llist *llist, t_my_llist *elem_to_add);
 t_my_llist	*myll_link_left(t_my_llist *llist, t_my_llist *elem_to_add);
+t_my_llist	*myll_unlink(t_my_llist *llist);
+t_my_llist	*myll_get_extreme_right(t_my_llist *llist);
+t_my_llist	*myll_get_extreme_left(t_my_llist *llist);
 t_my_llist	*myll_init(t_my_llist *llist);
 
 struct		s_my_llist
